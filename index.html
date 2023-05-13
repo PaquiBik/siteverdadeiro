@@ -9,7 +9,7 @@
 			$(".botao").click(function() {
 				var botao_id = $(this).attr("id");
 				$.get("liberar_agua.php", {botao_id: botao_id}, function(data) {
-					alert(data);
+					$("#recipiente").text(data + " ml");
 				});
 			});
 		});
@@ -29,5 +29,6 @@
 		<button id="botao9" class="botao">Liberar 450 ml</button>
 		<button id="botao10" class="botao">Liberar 500 ml</button>
 	</div>
+	<div id="recipiente">1000 ml</div>
 </body>
 </html>
