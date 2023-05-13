@@ -5,19 +5,53 @@
     <meta charset="utf-8">
   </head>
   <body>
-    <div class="controle">
-        <button id="botao1">Liberar 10ml</button>
-        <button id="botao2">Liberar 20ml</button>
-        <button id="botao3">Liberar 30ml</button>
-        <button id="botao4">Liberar 40ml</button>
-        <button id="botao5">Liberar 50ml</button>
-        <button id="botao6">Liberar 60ml</button>
-        <button id="botao7">Liberar 70ml</button>
-        <button id="botao8">Liberar 80ml</button>
-        <button id="botao9">Liberar 90ml</button>
-        <button id="botao10">Liberar 100ml</button>
-      </div>
-      
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <meta charset="UTF-8">
+        <title>Controle de Irrigação</title>
+        <style>
+          .button {
+            display: inline-block;
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+          .button:hover {
+            background-color: #3e8e41;
+          }
+        </style>
+      </head>
+      <body>
+        <h1>Controle de Irrigação</h1>
+        <div>
+          <button class="button" onclick="enviarComando(10)">Liberar 10ml</button>
+          <button class="button" onclick="enviarComando(20)">Liberar 20ml</button>
+          <button class="button" onclick="enviarComando(30)">Liberar 30ml</button>
+          <button class="button" onclick="enviarComando(40)">Liberar 40ml</button>
+          <button class="button" onclick="enviarComando(50)">Liberar 50ml</button>
+          <button class="button" onclick="enviarComando(60)">Liberar 60ml</button>
+          <button class="button" onclick="enviarComando(70)">Liberar 70ml</button>
+          <button class="button" onclick="enviarComando(80)">Liberar 80ml</button>
+          <button class="button" onclick="enviarComando(90)">Liberar 90ml</button>
+          <button class="button" onclick="enviarComando(100)">Liberar 100ml</button>
+        </div>
+        <div id="nivelAgua"></div>
+        <script>
+          function enviarComando(ml) {
+            // Adicione aqui o código para enviar o comando por infravermelho
+          }
+          // Adicione aqui o código para monitorar o nível de água do reservatório e atualizar o conteúdo da div "nivelAgua"
+        </script>
+      </body>
+    </html>
+    
+
   </body>
 </html>
 
