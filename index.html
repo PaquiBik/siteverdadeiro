@@ -1,57 +1,33 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <title>Título da página</title>
-    <meta charset="utf-8">
-  </head>
-  <body>
-    <!DOCTYPE html>
-    <html>
-      <head>
-        <meta charset="UTF-8">
-        <title>Controle de Irrigação</title>
-        <style>
-          .button {
-            display: inline-block;
-            padding: 10px;
-            margin: 10px;
-            font-size: 16px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-          }
-          .button:hover {
-            background-color: #3e8e41;
-          }
-        </style>
-      </head>
-      <body>
-        <h1>Controle de Irrigação</h1>
-        <div>
-          <button class="button" onclick="enviarComando(10)">Liberar 10ml</button>
-          <button class="button" onclick="enviarComando(20)">Liberar 20ml</button>
-          <button class="button" onclick="enviarComando(30)">Liberar 30ml</button>
-          <button class="button" onclick="enviarComando(40)">Liberar 40ml</button>
-          <button class="button" onclick="enviarComando(50)">Liberar 50ml</button>
-          <button class="button" onclick="enviarComando(60)">Liberar 60ml</button>
-          <button class="button" onclick="enviarComando(70)">Liberar 70ml</button>
-          <button class="button" onclick="enviarComando(80)">Liberar 80ml</button>
-          <button class="button" onclick="enviarComando(90)">Liberar 90ml</button>
-          <button class="button" onclick="enviarComando(100)">Liberar 100ml</button>
-        </div>
-        <div id="nivelAgua"></div>
-        <script>
-          function enviarComando(ml) {
-            // Adicione aqui o código para enviar o comando por infravermelho
-          }
-          // Adicione aqui o código para monitorar o nível de água do reservatório e atualizar o conteúdo da div "nivelAgua"
-        </script>
-      </body>
-    </html>
-    
-
-  </body>
+<html>
+<head>
+	<title>Sistema de Liberação de Água</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$(".botao").click(function() {
+				var botao_id = $(this).attr("id");
+				$.get("liberar_agua.php", {botao_id: botao_id}, function(data) {
+					alert(data);
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	<h1>Sistema de Liberação de Água</h1>
+	<div id="botoes">
+		<button id="botao1" class="botao">Liberar 50 ml</button>
+		<button id="botao2" class="botao">Liberar 100 ml</button>
+		<button id="botao3" class="botao">Liberar 150 ml</button>
+		<button id="botao4" class="botao">Liberar 200 ml</button>
+		<button id="botao5" class="botao">Liberar 250 ml</button>
+		<button id="botao6" class="botao">Liberar 300 ml</button>
+		<button id="botao7" class="botao">Liberar 350 ml</button>
+		<button id="botao8" class="botao">Liberar 400 ml</button>
+		<button id="botao9" class="botao">Liberar 450 ml</button>
+		<button id="botao10" class="botao">Liberar 500 ml</button>
+	</div>
+</body>
 </html>
-
